@@ -47,13 +47,16 @@ class DetailScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 400,
+                    height: 350,
                     width: 400,
                     child: Column(
                       children: [
-                        Text('${detailList!.articles[selectedIndex].title}'),
+                        Text('${detailList!.articles[selectedIndex].source.name}',style: TextStyle(color: Colors.white,fontSize: 30),),
+                        SizedBox(height: 10,),
+                        Text('${detailList!.articles[selectedIndex].title}',style: TextStyle(color: Colors.white),),
+                        SizedBox(height: 10,),
                       ReadMoreText(
-                      '${detailList!.articles[selectedIndex].description}',
+                      '${detailList!.articles[selectedIndex].description}',style: TextStyle(color: Colors.white),
                       trimMode: TrimMode.Line,
                       trimLines: 8,
                       colorClickableText: Colors.pink,

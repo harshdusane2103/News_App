@@ -22,27 +22,27 @@ class NewsController extends GetxController
   Future<NewsModal?> TeslaFormMap()
   async {
     final data= await apiHelper.teslaFetchData();
-    newsModal=NewsModal.formJson(data);
-    return newsModal;
+    teslaModal=NewsModal.formJson(data);
+    return teslaModal;
   }
 
   Future<NewsModal?> CountryFormMap()
   async {
     final data= await apiHelper.countryFetchData();
-    newsModal=NewsModal.formJson(data);
-    return newsModal;
+    countryModal=NewsModal.formJson(data);
+    return countryModal;
   }
   Future<NewsModal?> HeadlineFormMap()
   async {
     final data= await apiHelper.headlinesFetchData();
-    newsModal=NewsModal.formJson(data);
-    return newsModal;
+    headlinesModal=NewsModal.formJson(data);
+    return headlinesModal;
   }
   Future<NewsModal?> EverythingFormMap()
   async {
     final data= await apiHelper.everythingFetchData();
-    newsModal=NewsModal.formJson(data);
-    return newsModal;
+    everythingModal=NewsModal.formJson(data);
+    return everythingModal;
   }
 
 

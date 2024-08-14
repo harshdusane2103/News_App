@@ -7,17 +7,12 @@ import 'package:news_app/Modal/newsModal.dart';
 import '../Utils/golbal.dart';
 NewsController controller = Get.put(NewsController());
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class Homescreen extends StatelessWidget {
+  const Homescreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
 
-class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
 
-  @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return DefaultTabController(
@@ -141,11 +136,11 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.black,
           selectedItemColor: Colors.purple,
           unselectedItemColor: Colors.grey,
-          currentIndex: _selectedIndex,
+          currentIndex: selectedIndex,
           onTap: (index) {
-            setState(() {
-              _selectedIndex = index;
-            });
+
+              selectedIndex = index;
+
             // Add your navigation logic here
           },
           items: const [
